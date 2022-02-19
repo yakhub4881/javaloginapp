@@ -9,7 +9,7 @@ pipeline{
         {
             steps
             {
-              checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yakhub4881/maven-build-sonarqube.git']]])  
+              checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yakhub4881/javaloginapp.git']]])
             }
         }
         stage ('BUILD')
