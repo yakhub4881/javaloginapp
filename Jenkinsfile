@@ -21,7 +21,7 @@ pipeline{
         stage ('SonarQube Analysis')
         {
             steps{
-                withSonarQubeEnv(credentialsId: '6b05758ea8627c9c644c62aba55cbede16c180b1', installationName: 'SonarQube-Token') {
+                withSonarQubeEnv('SonarQube8.9.2') {
                 sh 'mvn sonar:sonar'
                 }                
             }
